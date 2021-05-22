@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  min-width: 950px;
+  background-color: #f1f1f1;
+}
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+select {
+  min-width:632px; 
+  min-height: 35px;
+  color: #4997ea;
+}
+video {
+  border-style: double;
+  min-width: 945px;
+}

@@ -1,0 +1,19 @@
+<section>  
+  <article>
+	<div class="row">
+	  <div class="column" *ngFor="let screen of _screens">
+		<img src="{{ screen.thumb }}" alt="Snow" style="width:100%">
+	  </div>
+	</div>
+	<h1>
+	  <u>DESKTOP CAPTURER WITH ELECTRON:</u>&nbsp;&nbsp;
+	  <select (change)="showSelectedScreenAndWindow ($event)">
+		<option> --: SCREEN/WINDOW LIST :-- </option>
+		<option *ngFor="let screen of _screens" value="{{screen.id}}">{{ screen.name }}</option>
+	  </select>
+	</h1>
+	<button type="button" *ngIf="_isStreaming" (click)="pauseStream()">!Pause!</button>
+	<button type="button" *ngIf="!_isStreaming" (click)="playStream()">!Play!</button>
+	<video id="video"></video>
+  </article>
+</section>
